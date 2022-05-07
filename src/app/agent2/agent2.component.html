@@ -1,0 +1,6 @@
+<p>agent2 busbooking</p>
+<input type="text" #ticketNumber>
+<button (click)="bookTicket(ticketNumber.value)">Book ticket</button>
+<ul *ngFor="let data of ticket2">
+    <li>{{data}}</li>
+</ul>

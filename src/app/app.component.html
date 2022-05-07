@@ -1,0 +1,173 @@
+<!-- <div *ngIf="name=='Pradeep' then thenBlock else elseBlock ">
+  <h1>Welcome to tutorials.com website</h1>
+</div> -->
+
+
+<!-- <ng-template [ngIf]="isLogin" [ngIfElse]="elseBlock">
+  <h1>Welcome to tutorials.com website</h1>
+</ng-template>
+
+<div [hidden]="!isLogin">
+  <h1>Welcome to the greatest website </h1>
+</div>
+
+<ng-template #elseBlock>
+  <h2>Please login</h2>
+</ng-template>
+
+<ng-template #thenBlock>
+  <h1>Welcome back!!</h1>
+</ng-template> -->
+
+
+<!-- <select name="choice" id="" (change)="selectColor($event)">
+  <option >Select color</option>
+  <option value="red">Red</option>
+  <option value="green">Green</option>
+  <option value="yellow">Yellow</option>
+</select>
+
+<div [ngSwitch]="choice">
+<h1 *ngSwitchCase="'red'">Red color selected</h1>
+<h1 *ngSwitchCase="'yellow'">yellow color selected</h1>
+<h1 *ngSwitchCase="'green'">Green color selected</h1>
+<h1 *ngSwitchDefault>Please select color</h1>
+</div> -->
+
+<!-- <div *ngIf="isLoggedIn && userName=='admin' else notLoggedIn">
+  <h1>User LoggedIn using and</h1>
+</div>
+
+<div *ngIf="isLoggedIn || userName=='admin'">
+  <h1>User LoggedIn using or</h1>
+</div>
+
+<div *ngIf="score>=75">First positon</div>
+<div *ngIf="score<75 && score>=60">second positon</div>
+<div *ngIf="score<60">Failed</div>
+
+<ng-template #notLoggedIn>
+<h2>User not logged in</h2>
+</ng-template> -->
+
+<!-- <table border="1">
+  <tr>
+    <th>Sr no.</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Gender</th>
+    <th>City</th>
+    <th>Qualification</th>
+  </tr>
+  <tr *ngFor="let data of employee; let i=index;trackBy:getEmployeeRecord">
+    <td>{{i+1}}</td>
+  <td>{{data.name|custompipe:data.gender}}</td>
+    <td>{{data.age|currency:'INR':true:'1.3-3'}}</td>
+    <td>{{data.gender}}</td>
+    <td>{{data.city|lowercase}}</td>
+    <td>
+      <div *ngFor="let d of data.qualification">
+        {{d}}
+      </div>
+    </td>
+  </tr>
+</table><br> -->
+<!-- <button (click)="loadMore()">Load more</button> -->
+<!-- {{date|date:"short"}} -->
+<!-- {{date|date|uppercase}}
+{{title|slice:2:3}} -->
+  <!-- {{employee|json|uppercase}} -->
+
+  <!-- <a routerLink="/" >Home</a><br>
+  <a routerLink="/login">Login</a><br>
+  <a routerLink="/register">Register</a><br>
+  <a routerLink="/profile">Profile</a><br>
+  <button (click)="goToLogin()">Go to login</button>
+  <router-outlet></router-outlet> -->
+
+<!-- <h1>Welcome to tutorial website</h1>
+<p>
+  <ngb-alert [dismissible]="false">
+    <strong>Warning!</strong> Better check yourself, you're not looking too good.
+  </ngb-alert>
+</p>
+<p *ngFor="let alert of alerts">
+  <ngb-alert [type]="alert.type" (closed)="close(alert)">{{ alert.message }}</ngb-alert>
+</p>
+<p>
+  <button type="button" class="btn btn-primary" (click)="reset()">Reset</button>
+</p> -->
+  <!-- <router-outlet></router-outlet> -->
+
+  <!-- <div class="col-md-6">
+    <h1>Contact from</h1>
+    <form [formGroup]="contactForm" class="form" >
+      <div class="form-group">
+        <input type="text" formControlName="yourname" placeholder="Enter your name" class="form-control" >
+      </div>
+      <div class="form-group">
+        <input type="email" formControlName="email" placeholder="Enter your email" class="form-control" >
+
+      </div>
+      <div class="form-group">
+        <input type="number" formControlName="mobile" placeholder="Enter your mobile number" class="form-control"  >
+
+      </div>
+      <div class="form-group">
+        <input type="submit" name="Send" class="btn btn-secondary" (click)="postData()">
+        <button class="btn btn-danger" (click)="setValue()">Set value</button>
+      </div>
+    </form>
+  </div> -->
+  <!-- <h1>services in angular</h1>
+  <h3>{{name}}</h3>
+  <h3>{{email}}</h3>
+  <h3>{{mobile}}</h3> -->
+
+
+  <!-- <h1>Singleton object</h1>
+  <div style="text-align: center;">
+  <app-agent1></app-agent1>
+  <app-agent2></app-agent2>
+  </div> -->
+
+  <style>
+    th,td{
+      border: 1px solid black;
+    }
+  </style>
+<!-- <table border="1">
+
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>username</th>
+    <th>email</th>
+    <th>street</th>
+    <th>suit</th>
+    <th>city</th>
+    <th>zipcode</th>
+    <th>latitude</th>
+    <th>longitude</th>
+  </tr>
+  <tr *ngFor="let data of userData$ | async">
+    <td>{{data.id}}</td>
+    <td>{{data.name}}</td>
+    <td>{{data.username}}</td>
+    <td>{{data.email}}</td>
+    <td>{{data.address.street}}</td>
+    <td>{{data.address.suite}}</td>
+    <td>{{data.address.city}}</td>
+    <td>{{data.address.zipcode}}</td>
+    <td>{{data.address.geo.lat}}</td>
+    <td>{{data.address.geo.lng}}</td>
+  </tr>
+</table> -->
+
+
+<a routerLink="/customer">Customer</a>
+<a [routerLink]="[{outlets:{customerList:['customerdetails']}}]">Customer details</a>
+<a [routerLink]="[{outlets:{customerOrder:['order']}}]">Order</a>
+<router-outlet></router-outlet>
+<router-outlet name="customerList"></router-outlet>
+<router-outlet name="customerOrder"></router-outlet>

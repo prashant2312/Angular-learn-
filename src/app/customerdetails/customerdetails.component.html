@@ -1,0 +1,8 @@
+<h3>customerdetails works!</h3>
+<ul>
+    <li *ngFor="let custData of customerDataArray">
+        {{custData.id}} - {{custData.name}} - {{custData.email}} - {{custData.phone}}
+    </li>
+</ul>
+<p>&nbsp;</p>
+<button (click)="close()"> close</button>
