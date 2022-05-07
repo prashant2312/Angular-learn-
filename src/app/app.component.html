@@ -76,9 +76,9 @@
 <!-- {{date|date:"short"}} -->
 <!-- {{date|date|uppercase}}
 {{title|slice:2:3}} -->
-  <!-- {{employee|json|uppercase}} -->
+<!-- {{employee|json|uppercase}} -->
 
-  <!-- <a routerLink="/" >Home</a><br>
+<!-- <a routerLink="/" >Home</a><br>
   <a routerLink="/login">Login</a><br>
   <a routerLink="/register">Register</a><br>
   <a routerLink="/profile">Profile</a><br>
@@ -97,9 +97,9 @@
 <p>
   <button type="button" class="btn btn-primary" (click)="reset()">Reset</button>
 </p> -->
-  <!-- <router-outlet></router-outlet> -->
+<!-- <router-outlet></router-outlet> -->
 
-  <!-- <div class="col-md-6">
+<!-- <div class="col-md-6">
     <h1>Contact from</h1>
     <form [formGroup]="contactForm" class="form" >
       <div class="form-group">
@@ -119,23 +119,24 @@
       </div>
     </form>
   </div> -->
-  <!-- <h1>services in angular</h1>
+<!-- <h1>services in angular</h1>
   <h3>{{name}}</h3>
   <h3>{{email}}</h3>
   <h3>{{mobile}}</h3> -->
 
 
-  <!-- <h1>Singleton object</h1>
+<!-- <h1>Singleton object</h1>
   <div style="text-align: center;">
   <app-agent1></app-agent1>
   <app-agent2></app-agent2>
   </div> -->
 
-  <style>
-    th,td{
-      border: 1px solid black;
-    }
-  </style>
+<style>
+  th,
+  td {
+    border: 1px solid black;
+  }
+</style>
 <!-- <table border="1">
 
   <tr>
@@ -173,7 +174,7 @@
 <router-outlet name="customerOrder"></router-outlet> -->
 
 
-<h2 >Ng template in angular</h2>
+<!-- <h2 >Ng template in angular</h2>
 <ng-template [ngIf]="display">
   <p>ng template rendering</p>
 </ng-template>
@@ -186,4 +187,36 @@
   <ng-template [ngSwitchCase]="'developer'">Persion is developer</ng-template>
   <ng-template [ngSwitchCase]="'designer'">Persion is designer</ng-template>
   <ng-template [ngSwitchCase]="'seo'">Persion is seo</ng-template>
-</div>
+</div> -->
+
+<!-- <!-- <h2>ng-container</h2> -->
+<ng-container *ngIf="display else loading">
+  It is ng-container example
+</ng-container>
+
+<ng-template #loading>
+  It is ng template
+</ng-template> -->
+
+<!-- <table border="1">
+  <tr>
+    <th>name</th>
+    <th>
+      email
+    </th>
+  </tr>
+  <tr *ngFor="let emp of employees">
+<ng-container *ngIf="emp.salary>10000">
+  <td>{{emp.name}}</td>
+  <td>{{emp.email}}</td>
+</ng-container>
+  </tr>
+</table> -->
+
+<ng-container *ngTemplateOutlet="loading; context:data">
+  It's ng container loading
+</ng-container>
+
+<ng-template #loading let-mobile="phone">
+  {{mobile}}
+</ng-template>

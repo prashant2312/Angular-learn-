@@ -233,11 +233,16 @@ export class AppComponent {
 constructor(){
   
 }
-display=true
+// display=true
 employees=[
-  {"name":"prashant1","email":"abc@gmail.com"},
-  {"name":"prashant2","email":"abcd@gmail.com"},
-  {"name":"prashant3","email":"abcdef@gmail.com"},
+  {"name":"prashant1","email":"abc@gmail.com","salary":240000},
+  {"name":"prashant2","email":"abcd@gmail.com","salary":4544},
+  {"name":"prashant3","email":"abcdef@gmail.com","salary":545454},
 ]
 
+
+display=false
+data={
+  "phone":1234567890
+}
 }
