@@ -233,4 +233,11 @@ export class AppComponent {
 constructor(){
   
 }
+display=true
+employees=[
+  {"name":"prashant1","email":"abc@gmail.com"},
+  {"name":"prashant2","email":"abcd@gmail.com"},
+  {"name":"prashant3","email":"abcdef@gmail.com"},
+]
+
 }

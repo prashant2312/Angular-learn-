@@ -165,9 +165,25 @@
 </table> -->
 
 
-<a routerLink="/customer">Customer</a>
+<!-- <a routerLink="/customer">Customer</a>
 <a [routerLink]="[{outlets:{customerList:['customerdetails']}}]">Customer details</a>
 <a [routerLink]="[{outlets:{customerOrder:['order']}}]">Order</a>
 <router-outlet></router-outlet>
 <router-outlet name="customerList"></router-outlet>
-<router-outlet name="customerOrder"></router-outlet>
+<router-outlet name="customerOrder"></router-outlet> -->
+
+
+<h2 >Ng template in angular</h2>
+<ng-template [ngIf]="display">
+  <p>ng template rendering</p>
+</ng-template>
+
+<ng-template [ngFor] let-emp [ngForOf]="employees" let-i="index">
+<p>{{i+1}} - {{emp.name}} - {{emp.email}}</p>
+</ng-template>
+
+<div [ngSwitch]="'developer'">
+  <ng-template [ngSwitchCase]="'developer'">Persion is developer</ng-template>
+  <ng-template [ngSwitchCase]="'designer'">Persion is designer</ng-template>
+  <ng-template [ngSwitchCase]="'seo'">Persion is seo</ng-template>
+</div>
