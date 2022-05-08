@@ -18,7 +18,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Agent1Component } from './agent1/agent1.component';
 import { Agent2Component } from './agent2/agent2.component';
 import {HttpClientModule} from '@angular/common/http';
-import { CustomerdetailsComponent } from './customerdetails/customerdetails.component'
+import { CustomerdetailsComponent } from './customerdetails/customerdetails.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { SalaryComponent } from './salary/salary.component'
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { CustomerdetailsComponent } from './customerdetails/customerdetails.comp
     AboutComponent,
     Agent1Component,
     Agent2Component,
-    CustomerdetailsComponent
+    CustomerdetailsComponent,
+    EmployeeComponent,
+    SalaryComponent
   ],
   imports: [
     BrowserModule,

@@ -3,8 +3,9 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
 import { Observable } from 'rxjs'
-import {Employee} from './empinterface'
-import {Address} from './empaddressinterface'
+import { Employee } from './empinterface'
+import { Address } from './empaddressinterface'
+import * as $ from 'jquery'
 // interface CombineInterface extends Employee,Address{}
 // interface Order{
 //   TotalPrice(price:number,quantity:number):number
@@ -209,40 +210,49 @@ export class AppComponent {
   // this.userData$=this.userDataService.getUserDate();  
   // }
 
-//   constructor() {
+  //   constructor() {
 
-//   }
+  //   }
 
-//   getData() {
-//     let companyEmp:CombineInterface   = {
-//       name: "1234"+23123234,
-//       age: 24,
-//       email: "abc@gmail.com",
-//       phone: 1234567890,
-//       street: 'Bhaglpur',
-//       city: 'Jaunpur',
-//       pincode: 123456
-//     }
-//     return companyEmp;
-//   }
-// totalAmount:Order={
-//   TotalPrice: function (price: number, quantity: number): number {
-//     return price*quantity;
-//   }
-// }
-constructor(){
-  
-}
-// display=true
-employees=[
-  {"name":"prashant1","email":"abc@gmail.com","salary":240000},
-  {"name":"prashant2","email":"abcd@gmail.com","salary":4544},
-  {"name":"prashant3","email":"abcdef@gmail.com","salary":545454},
-]
+  //   getData() {
+  //     let companyEmp:CombineInterface   = {
+  //       name: "1234"+23123234,
+  //       age: 24,
+  //       email: "abc@gmail.com",
+  //       phone: 1234567890,
+  //       street: 'Bhaglpur',
+  //       city: 'Jaunpur',
+  //       pincode: 123456
+  //     }
+  //     return companyEmp;
+  //   }
+  // totalAmount:Order={
+  //   TotalPrice: function (price: number, quantity: number): number {
+  //     return price*quantity;
+  //   }
+  // }
+  constructor() {
+
+  }
+  // display=true
+  employees = [
+    { "name": "prashant1", "email": "abc@gmail.com", "salary": 240000 },
+    { "name": "prashant2", "email": "abcd@gmail.com", "salary": 4544 },
+    { "name": "prashant3", "email": "abcdef@gmail.com", "salary": 545454 },
+  ]
 
 
-display=false
-data={
-  "phone":1234567890
-}
+  display = false
+  data = {
+    "phone": 1234567890
+  }
+  ngOnInit(): void {
+    $(document).ready(function () {
+      $("button").click(function () {
+        $("#div1").fadeIn();
+        $("#div2").fadeIn("slow");
+        $("#div3").fadeIn(3000);
+      });
+    });
+  }
 }
