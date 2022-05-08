@@ -20,7 +20,8 @@ import { Agent2Component } from './agent2/agent2.component';
 import {HttpClientModule} from '@angular/common/http';
 import { CustomerdetailsComponent } from './customerdetails/customerdetails.component';
 import { EmployeeComponent } from './employee/employee.component';
-import { SalaryComponent } from './salary/salary.component'
+import { SalaryComponent } from './salary/salary.component';
+import { EmpdirectiveDirective } from './empdirective.directive'
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { SalaryComponent } from './salary/salary.component'
     Agent2Component,
     CustomerdetailsComponent,
     EmployeeComponent,
-    SalaryComponent
+    SalaryComponent,
+    EmpdirectiveDirective
   ],
   imports: [
     BrowserModule,
