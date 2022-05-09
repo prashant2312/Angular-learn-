@@ -21,7 +21,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { CustomerdetailsComponent } from './customerdetails/customerdetails.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { SalaryComponent } from './salary/salary.component';
-import { EmpdirectiveDirective } from './empdirective.directive'
+import { EmpdirectiveDirective } from './empdirective.directive';
+import { StyleAppDirective } from './style-app.directive'
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { EmpdirectiveDirective } from './empdirective.directive'
     CustomerdetailsComponent,
     EmployeeComponent,
     SalaryComponent,
-    EmpdirectiveDirective
+    EmpdirectiveDirective,
+    StyleAppDirective
   ],
   imports: [
     BrowserModule,

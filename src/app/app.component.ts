@@ -1,5 +1,5 @@
 import { UserdataService } from './userdata.service';
-import { Component } from '@angular/core';
+import {HostBinding,HostListener, Component, ElementRef } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
 import { Observable } from 'rxjs'
@@ -231,28 +231,46 @@ export class AppComponent {
   //     return price*quantity;
   //   }
   // }
-  constructor() {
+  // constructor() {
 
-  }
+  // }
   // display=true
-  employees = [
-    { "name": "prashant1", "email": "abc@gmail.com", "salary": 240000 },
-    { "name": "prashant2", "email": "abcd@gmail.com", "salary": 4544 },
-    { "name": "prashant3", "email": "abcdef@gmail.com", "salary": 545454 },
-  ]
+  // employees = [
+  //   { "name": "prashant1", "email": "abc@gmail.com", "salary": 240000 },
+  //   { "name": "prashant2", "email": "abcd@gmail.com", "salary": 4544 },
+  //   { "name": "prashant3", "email": "abcdef@gmail.com", "salary": 545454 },
+  // ]
 
 
-  display = false
-  data = {
-    "phone": 1234567890
-  }
-  ngOnInit(): void {
-    $(document).ready(function () {
-      $("button").click(function () {
-        $("#div1").fadeIn();
-        $("#div2").fadeIn("slow");
-        $("#div3").fadeIn(3000);
-      });
-    });
-  }
+  // display = false
+  // data = {
+  //   "phone": 1234567890
+  // }
+  // ngOnInit(): void {
+  //   $(document).ready(function () {
+  //     $("button").click(function () {
+  //       $("#div1").fadeIn();
+  //       $("#div2").fadeIn("slow");
+  //       $("#div3").fadeIn(3000);
+  //     });
+  //   });
+  // }
+
+@HostBinding('style.color') textColor
+constructor(private eleRef:ElementRef){
+  this.textColor="red"
+}
+
+@HostListener("click") onClick(){
+  alert("window click")
+  this.textColor="green"
+}
+@HostListener("mouseover") onMouseHover(){
+  this.textColor="yellow"
+}
+@HostListener("mouseout") onMouseOut(){
+  this.textColor="red"
+}
+
+
 }
