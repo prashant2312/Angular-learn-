@@ -291,9 +291,20 @@ export class AppComponent {
 //   }
 
 
-randomSalary;
-constructor(private objSalary:EmpSalaryService){
-  this.randomSalary=objSalary.getEmpRanSalary();
+// randomSalary;
+// constructor(private objSalary:EmpSalaryService){
+//   this.randomSalary=objSalary.getEmpRanSalary();
+// }
+
+
+company_name=null;
+address:any
+ngOnInit():void{
+  this.address={
+    street:"Model",
+    city:"Noida",
+    pincode:123456
+  }
 }
 
 }

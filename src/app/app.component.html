@@ -249,13 +249,25 @@
 <button (click)="storeCookie()">Set cookie</button> -->
 
 
-<h2>ViewProviders</h2>
-<h3>App component salary : {{randomSalary}}</h3>
+<!-- <h2>ViewProviders</h2> -->
+<!-- <h3>App component salary : {{randomSalary}}</h3> -->
 
 <!-- <h3><app-parent-component></app-parent-component></h3> -->
-<br><br><br><br>
+<!-- <br><br><br><br>
 <app-parent-component>
   <h3>Injected data</h3>
 <app-child-component>
 </app-child-component>
-</app-parent-component>
+</app-parent-component> -->
+
+
+
+<h1>
+  safe navigation operation
+</h1>
+
+<h3>Company name : {{company_name}}</h3>
+<h4>Address</h4>
+<p>Street : {{address?.street}}</p>
+<p>City : {{address?.city}}</p>
+<p>phone : {{address.phone}}</p>
