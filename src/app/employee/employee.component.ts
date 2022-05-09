@@ -6,23 +6,20 @@ import { Component, ElementRef, OnInit, ViewChild, AfterViewInit } from '@angula
   templateUrl: './employee.component.html',
   styleUrls: ['./employee.component.css']
 })
-export class EmployeeComponent implements OnInit,AfterViewInit {
-  @ViewChild(SalaryComponent) salaryComponent:SalaryComponent
-@ViewChild("useremailRef") usernameRef:ElementRef
+export class EmployeeComponent implements OnInit, AfterViewInit {
+
+  @ViewChild("customTitle") customTitle: ElementRef
+  @ViewChild("name") name:ElementRef
+  @ViewChild("email") email:ElementRef
+
   constructor() { }
   ngAfterViewInit(): void {
-    this.usernameRef.nativeElement.focus();
-    setTimeout(()=>{
-      this.usernameRef.nativeElement.style.display="none"
-      // this.usernameRef.nativeElement.style.border-bottom="none"
-    },2000)
+this.customTitle.nativeElement.style.color="blue"
+this.name.nativeElement.style.background="black"
+this.name.nativeElement.style.color="white"
+this.email.nativeElement.value="abc@gmail.com"
   }
-increment(){
-  this.salaryComponent.salaryIncrement();
-}
-decrement(){
-  this.salaryComponent.salaryDecrement();
-}
+
   ngOnInit(): void {
   }
 
