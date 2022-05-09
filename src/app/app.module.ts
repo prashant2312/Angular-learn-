@@ -1,3 +1,4 @@
+import { CookieService } from 'ngx-cookie-service';
 
 
 import { BusbookingService } from './busbooking.service';
@@ -22,7 +23,9 @@ import { CustomerdetailsComponent } from './customerdetails/customerdetails.comp
 import { EmployeeComponent } from './employee/employee.component';
 import { SalaryComponent } from './salary/salary.component';
 import { EmpdirectiveDirective } from './empdirective.directive';
-import { StyleAppDirective } from './style-app.directive'
+import { StyleAppDirective } from './style-app.directive';
+import { ParentComponentComponent } from './parent-component/parent-component.component';
+import { ChildComponentComponent } from './child-component/child-component.component'
 
 @NgModule({
   declarations: [
@@ -38,7 +41,9 @@ import { StyleAppDirective } from './style-app.directive'
     EmployeeComponent,
     SalaryComponent,
     EmpdirectiveDirective,
-    StyleAppDirective
+    StyleAppDirective,
+    ParentComponentComponent,
+    ChildComponentComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +53,7 @@ import { StyleAppDirective } from './style-app.directive'
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

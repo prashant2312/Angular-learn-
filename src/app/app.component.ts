@@ -1,11 +1,13 @@
 import { UserdataService } from './userdata.service';
-import {HostBinding,HostListener, Component, ElementRef } from '@angular/core';
+import { HostBinding, HostListener, Component, ElementRef, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
 import { Observable } from 'rxjs'
 import { Employee } from './empinterface'
 import { Address } from './empaddressinterface'
 import * as $ from 'jquery'
+import { CookieService } from 'ngx-cookie-service';
+import {EmpSalaryService} from "./emp-salary.service"
 // interface CombineInterface extends Employee,Address{}
 // interface Order{
 //   TotalPrice(price:number,quantity:number):number
@@ -256,21 +258,42 @@ export class AppComponent {
   //   });
   // }
 
-@HostBinding('style.color') textColor
-constructor(private eleRef:ElementRef){
-  this.textColor="red"
-}
 
-@HostListener("click") onClick(){
-  alert("window click")
-  this.textColor="green"
-}
-@HostListener("mouseover") onMouseHover(){
-  this.textColor="yellow"
-}
-@HostListener("mouseout") onMouseOut(){
-  this.textColor="red"
-}
 
+
+
+
+  // @HostBinding('style.color') textColor
+  // constructor(private eleRef:ElementRef){
+  //   this.textColor="red"
+  // }
+
+  // @HostListener("click") onClick(){
+  //   alert("window click")
+  //   this.textColor="green"
+  // }
+  // @HostListener("mouseover") onMouseHover(){
+  //   this.textColor="yellow"
+  // }
+  // @HostListener("mouseout") onMouseOut(){
+  //   this.textColor="red"
+  // }
+//   constructor(private cookie:CookieService) {
+// cookie.set("name","prashant")
+//   }
+
+//   ngOnInit(): void {
+//   }
+//   storeCookie(){
+//    alert("hello")
+//    this.cookie.set("name","prashant")
+// localStorage.setItem("n","n")
+//   }
+
+
+randomSalary;
+constructor(private objSalary:EmpSalaryService){
+  this.randomSalary=objSalary.getEmpRanSalary();
+}
 
 }
